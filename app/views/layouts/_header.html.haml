@@ -8,7 +8,6 @@
 
         %li.dropdown.user
           = link_to edit_user_registration_path , class:'dropdown-toggle', data:{toggle:'dropdown', target:'#'} do
-            = image_tag user_avatar(current_user)
             %span= current_user.name
             %i.icon-caret-down
 
