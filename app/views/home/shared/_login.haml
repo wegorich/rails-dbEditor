@@ -1,0 +1,28 @@
+.auth
+  - user = User.new
+  .block
+    %form#new_user
+      %header
+        %h2
+          Войдите
+        %p
+          Что бы быть полноценным пользователем
+      %section
+        = simple_form_for user, as: :user, url: session_path(:user) do |f|
+          = f.email_field :email, placeholder: 'введите свой email', autofocus: true
+          .attach-group
+            = f.password_field :password, placeholder: 'пароль'
+            = f.submit 'Вход', class: 'btn btn-light-green'
+  .block
+    %form#new_user
+      %header
+        %h2
+          Зарегистрируйтесь
+        %p
+          Что бы работать с нашей системой
+      %section
+        = simple_form_for user, as: :user, url: registration_path(:user) do |f|
+          = f.email_field :email, placeholder: 'введите свой email'
+          .attach-group
+            = f.password_field :password, placeholder: 'пароль'
+            = f.submit 'Регистрация', class: 'btn btn-regular'

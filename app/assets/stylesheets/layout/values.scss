@@ -33,6 +33,7 @@ $button-padding: 10px;
 
 $border-color: #dadad8;
 $base-border: $border-width solid $border-color;
+$layout-box: 0 0 0 $main-margin/2 rgba($border-color, .3);
 $border-bold: $border-width solid $border-color;
 
 $tag-padding: 6px 8px;

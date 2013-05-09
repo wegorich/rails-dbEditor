@@ -43,3 +43,6 @@
     .name
       %span
         Конференции
+
+- unless user_signed_in?
+  = render partial: 'home/shared/login'

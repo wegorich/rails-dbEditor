@@ -53,3 +53,5 @@ gem 'bourbon'
 gem 'neat'
 gem 'fancybox2-rails'
 gem 'font-awesome-sass-rails'
+
+gem 'simple_form'
