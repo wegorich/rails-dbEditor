@@ -2,14 +2,14 @@
 %table
   %thead
     %tr
-      %th [name
+      %th name
       %th
       %th
       %th
   %tbody
     - @firms.each do |firm|
       %tr
-        %td= firm.[name
+        %td= firm.name
         %td= link_to 'Show', firm
         %td= link_to 'Edit', edit_firm_path(firm)
         %td= link_to 'Destroy', firm, method: :delete, data: { confirm: 'Are you sure?' }

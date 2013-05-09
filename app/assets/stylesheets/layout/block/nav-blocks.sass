@@ -1,0 +1,45 @@
+.nav-blocks
+  @include outer-container
+  margin-top: $main-padding
+  height: $layout-margin * 10
+  border-radius: $layout-margin
+  border: $base-border
+  border-width: $main-margin/3
+  overflow: hidden
+  .group
+    float: left
+    width: 25%
+    height: 100%
+    a
+      height: 50%
+      width: 100%
+      float: none
+  a
+    height: 100%
+    float: left
+    display: block
+    box-shadow: none
+    margin-right: 0
+    width: 25%
+
+    .image
+      padding: $main-margin
+      height: 80%
+      overflow: hidden
+      img
+        height: 100%
+        margin: 0 auto
+        display: block
+
+    .name
+      display: table
+      height: 20%
+      width: 100%
+
+      text-align: center
+      color: white
+      span
+        vertical-align: middle
+        display: table-cell
+    &:hover .name
+      background: rgba($black, .4)

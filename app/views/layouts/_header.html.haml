@@ -1,0 +1,21 @@
+%header.page
+  .wrapper
+    %section.logo
+      = link_to 'dataBase', root_path, class:'dropdown-toggle', data:{toggle:'dropdown', target:'#'}
+
+    %ul.list.inline.session
+      - if user_signed_in?
+
+        %li.dropdown.user
+          = link_to edit_user_registration_path , class:'dropdown-toggle', data:{toggle:'dropdown', target:'#'} do
+            = image_tag user_avatar(current_user)
+            %span= current_user.name
+            %i.icon-caret-down
+
+          %ul.dropdown-menu.up
+            %li
+              = link_to 'Персональная информация', edit_user_registration_path
+            %li
+              = link_to 'Изменить пароль', edit_user_registration_path
+            %li
+              = link_to 'Выйти', destroy_user_session_path, method: :delete

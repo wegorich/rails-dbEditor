@@ -1,9 +1,20 @@
-!!!
-%html
-  %head
-    %title Htdocs
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = csrf_meta_tags
-  %body
-    = yield
+- content_for :header do
+  = render 'layouts/header'
+
+- content_for :main do
+  %section.main{class: params['controller']}
+    - if content_for? :aside
+      %section.main-content
+        = yield
+      %aside.aside-content
+        = yield(:aside)
+    - else
+      .full-main-content
+        = yield
+
+- content_for :footer do
+  %footer.page
+    .wrapper
+      %span.r &copy; Юдинцева Юлия, 2013
+
+= render 'layouts/base'

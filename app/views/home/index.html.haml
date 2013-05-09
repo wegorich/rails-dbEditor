@@ -1,3 +1,45 @@
-%h1 Listing homes
-%table
+%h1 Служба проректора по производственному обучению
+.nav-blocks
+  .group
+    = link_to electives_path, class: 'back-green' do
+      .image
+        = image_tag 'icons/student.png'
+      .name
+        %span
+          Учащиеся
 
+    = link_to electives_path, class: 'back-orange' do
+      .image
+        = image_tag 'icons/sport.png'
+      .name
+        %span
+          Кружки
+
+  = link_to specialties_path, class: 'back-light-green' do
+    .image
+      = image_tag 'icons/group.png'
+    .name
+      %span
+        Списки групп
+
+  .group
+    = link_to specialties_path, class: 'back-light-blue' do
+      .image
+        = image_tag 'icons/document.png'
+      .name
+        %span
+          Свидетельства
+
+    = link_to firms_path, class: 'back-icon-blue' do
+      .image
+        = image_tag 'icons/boss.png'
+      .name
+        %span
+          Организации / заказчики
+
+  = link_to specialties_path, class: 'back-red' do
+    .image
+      = image_tag 'icons/discussion.png'
+    .name
+      %span
+        Конференции

@@ -2,7 +2,7 @@
 %table
   %thead
     %tr
-      %th [num
+      %th num
       %th Name
       %th
       %th
@@ -10,7 +10,7 @@
   %tbody
     - @specialties.each do |specialty|
       %tr
-        %td= specialty.[num
+        %td= specialty.num
         %td= specialty.name
         %td= link_to 'Show', specialty
         %td= link_to 'Edit', edit_specialty_path(specialty)
