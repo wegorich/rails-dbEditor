@@ -1,0 +1,76 @@
+  [1m[36m (24.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (5.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20130509091418)
+  [1m[35m (3.1ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130509091418')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddDeviseToUsers (20130509091959)
+  [1m[35m (4.3ms)[0m  ALTER TABLE `users` ADD `email` varchar(255) DEFAULT '' NOT NULL
+  [1m[36m (4.4ms)[0m  [1mALTER TABLE `users` ADD `encrypted_password` varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (3.5ms)[0m  ALTER TABLE `users` ADD `reset_password_token` varchar(255)
+  [1m[36m (4.7ms)[0m  [1mALTER TABLE `users` ADD `reset_password_sent_at` datetime[0m
+  [1m[35m (3.8ms)[0m  ALTER TABLE `users` ADD `remember_created_at` datetime
+  [1m[36m (3.3ms)[0m  [1mALTER TABLE `users` ADD `sign_in_count` int(11) DEFAULT 0[0m
+  [1m[35m (4.2ms)[0m  ALTER TABLE `users` ADD `current_sign_in_at` datetime
+  [1m[36m (3.6ms)[0m  [1mALTER TABLE `users` ADD `last_sign_in_at` datetime[0m
+  [1m[35m (3.9ms)[0m  ALTER TABLE `users` ADD `current_sign_in_ip` varchar(255)
+  [1m[36m (4.3ms)[0m  [1mALTER TABLE `users` ADD `last_sign_in_ip` varchar(255)[0m
+  [1m[35m (5.5ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`) 
+  [1m[36m (5.9ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130509091959')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 12:44:03 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6:       %th
+     7:       %th
+     8:   %tbody
+     9:     - @homes.each do |home|
+    10:       %tr
+    11:         %td= link_to 'Show', home
+    12:         %td= link_to 'Edit', edit_home_path(home)
+  app/views/home/index.html.haml:9:in `_app_views_home_index_html_haml___4315451278492916073_70248865684380'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.3ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 12:44:17 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 331ms (Views: 330.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 12:44:18 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-05-09 12:44:18 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-05-09 12:44:18 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-09 12:44:18 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-09 12:44:18 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-05-09 12:44:18 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-09 12:44:18 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-09 12:44:18 +0300
