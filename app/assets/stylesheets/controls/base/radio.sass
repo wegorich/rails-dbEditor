@@ -1,0 +1,23 @@
+input[type='radio']
+  display: none
+  + label
+    height: $radio-height /* the height of the image */
+    padding-left: 1.5em /* the width of the image plus the gutter */
+    background: image-url("icons/radio.png") no-repeat
+    background-position: 0 (-$radio-height)
+    line-height: 1
+    padding-bottom: 0!important
+    cursor: pointer
+
+  &:checked + label
+    background-position: 0 0
+    color: $dark-black
+
+
+.radio
+  label
+    @include inline-block
+    display: inline-block!important
+  margin-left: $layout-margin
+  &:first-child
+    margin-left: 0

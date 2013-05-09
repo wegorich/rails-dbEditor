@@ -1,0 +1,44 @@
+.pagination
+  background: none!important
+  cursor: default
+  margin-top: $layout-margin!important
+  @include clearfix
+  line-height: $modal-padding
+  display: table
+  width: 100%
+  .nav
+    display: table-cell
+    vertical-align: middle
+    a
+      box-shadow: none
+      &:hover
+        color: $blue
+    a, span, em
+      font-size: $font-size + $border-width
+      line-height: $main-padding
+      padding: 0 $main-margin/2
+      min-width: $main-padding
+      border-radius: $main-padding/2
+      margin-left: 4px
+      display: block
+      float: left
+      color: $black
+      &:first-child
+        margin-left: 0
+    .current
+      background: $black
+      color: white
+  .results
+    float: right
+    line-height: 2
+    .select2-focusser.select2-offscreen
+      display: none
+    .select2-choice
+      margin-left: $main-margin
+      box-shadow: none
+      border: $base-border
+      border-radius: $base-border-radius
+      background-image: none
+      div
+        background: none
+        border: 0

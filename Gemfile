@@ -48,3 +48,8 @@ gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'haml', '~> 4.0.0'
 gem 'html2haml'
 gem 'hpricot'
+
+gem 'bourbon'
+gem 'neat'
+gem 'fancybox2-rails'
+gem 'font-awesome-sass-rails'

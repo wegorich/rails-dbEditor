@@ -1,0 +1,65 @@
+.simple_form
+  h1
+    a
+      margin-left: $modal-padding
+      font-weight: normal
+    
+  
+  h1, h2
+    color: $sub-gray
+    line-height: 1
+    margin-bottom: $main-padding
+  
+  .input
+    label
+      display: block
+      padding-bottom: $main-margin/3
+      abbr
+        color: #f69556
+      
+    
+    margin-top: $main-padding
+    :first-child
+      margin-top: 0
+    
+  
+  .center
+    margin-top: $main-margin
+    text-align: center
+    input
+      margin-bottom: $layout-margin
+    
+    p
+      margin: auto
+
+  input, textarea
+    @include placeholder
+      font-size: .8em
+      font-style: italic
+
+  
+  .field_with_errors
+    position: relative
+    input
+      border: $border-width solid $red
+    
+    span.error
+      display: block
+      color: $red
+      font-size: .8em
+
+  .control-group
+    margin-bottom: $layout-margin
+    &.cg-small
+      width: 32%
+    .title
+      font-size: 1.1em
+    .input
+      margin-top: $main-margin
+    &:last-child
+      margin-bottom: 0
+
+  .btn
+    padding:
+      left: $layout-margin
+      right: $layout-margin

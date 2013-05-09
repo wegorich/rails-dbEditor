@@ -98,3 +98,392 @@ Migrating to CreateFirms (20130509102036)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130509102036')
   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 13:38:55 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (2.9ms)
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 28 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/dropdown.scss
+         from line 5 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 36 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 105 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/file_upload.sass
+         from line 12 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.scss
+
+Completed 500 Internal Server Error in 1269ms
+
+ActionView::Template::Error (File to import not found or unreadable: font-awesome.
+Load paths:
+  /Applications/MAMP/htdocs/dbEditor/app/assets/javascripts
+  /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets
+  /Applications/MAMP/htdocs/dbEditor/vendor/assets/javascripts
+  /Applications/MAMP/htdocs/dbEditor/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/font-awesome-rails-3.0.2.0/vendor/assets/fonts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/font-awesome-rails-3.0.2.0/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/images
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392@global/gems/neat-1.2.1/app/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/turbolinks-1.1.1/lib/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/jquery-rails-2.2.1/vendor/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.scss:18)):
+    2: %html
+    3:   %head
+    4:     %title Htdocs
+    5:     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    6:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/application.css.scss:18
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___65322959528531859_70251421331300'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.3ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (39.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 13:41:06 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Invalid @import: expected end of line, was ";".
+  (in /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass:1)):
+    2: %html
+    3:   %head
+    4:     %title Htdocs
+    5:     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    6:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/application.css.sass:1
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___65322959528531859_70251421331300'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 13:41:08 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (Invalid @import: expected end of line, was ";".
+  (in /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass:1)):
+    2: %html
+    3:   %head
+    4:     %title Htdocs
+    5:     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    6:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/application.css.sass:1
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___65322959528531859_70251421331300'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 13:41:37 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 28 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/dropdown.scss
+         from line 5 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 36 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 105 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/file_upload.sass
+         from line 12 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+Completed 500 Internal Server Error in 330ms
+
+ActionView::Template::Error (File to import not found or unreadable: font-awesome.
+Load paths:
+  /Applications/MAMP/htdocs/dbEditor/app/assets/javascripts
+  /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets
+  /Applications/MAMP/htdocs/dbEditor/vendor/assets/javascripts
+  /Applications/MAMP/htdocs/dbEditor/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/font-awesome-rails-3.0.2.0/vendor/assets/fonts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/font-awesome-rails-3.0.2.0/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/images
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392@global/gems/neat-1.2.1/app/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/turbolinks-1.1.1/lib/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/jquery-rails-2.2.1/vendor/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass:18)):
+    2: %html
+    3:   %head
+    4:     %title Htdocs
+    5:     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    6:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/application.css.sass:18
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___65322959528531859_70251421331300'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 13:43:09 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.2ms)
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 28 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/dropdown.scss
+         from line 5 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 36 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 105 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/file_upload.sass
+         from line 12 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+Completed 500 Internal Server Error in 382ms
+
+ActionView::Template::Error (File to import not found or unreadable: font-awesome.
+Load paths:
+  /Applications/MAMP/htdocs/dbEditor/app/assets/javascripts
+  /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets
+  /Applications/MAMP/htdocs/dbEditor/vendor/assets/javascripts
+  /Applications/MAMP/htdocs/dbEditor/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/font-awesome-rails-3.0.2.0/vendor/assets/fonts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/font-awesome-rails-3.0.2.0/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/images
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392@global/gems/neat-1.2.1/app/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/turbolinks-1.1.1/lib/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/jquery-rails-2.2.1/vendor/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass:18)):
+    2: %html
+    3:   %head
+    4:     %title Htdocs
+    5:     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    6:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/application.css.sass:18
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___65322959528531859_70251421331300'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 13:43:11 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.1ms)
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 28 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/dropdown.scss
+         from line 5 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 36 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 105 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/file_upload.sass
+         from line 12 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+Completed 500 Internal Server Error in 354ms
+
+ActionView::Template::Error (File to import not found or unreadable: font-awesome.
+Load paths:
+  /Applications/MAMP/htdocs/dbEditor/app/assets/javascripts
+  /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets
+  /Applications/MAMP/htdocs/dbEditor/vendor/assets/javascripts
+  /Applications/MAMP/htdocs/dbEditor/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/font-awesome-rails-3.0.2.0/vendor/assets/fonts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/font-awesome-rails-3.0.2.0/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/images
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/fancybox2-rails-0.2.4/vendor/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392@global/gems/neat-1.2.1/app/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.5/app/assets/stylesheets
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/turbolinks-1.1.1/lib/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/jquery-rails-2.2.1/vendor/assets/javascripts
+  /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/coffee-rails-4.0.0/lib/assets/javascripts
+  (in /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass:18)):
+    2: %html
+    3:   %head
+    4:     %title Htdocs
+    5:     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    6:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/application.css.sass:18
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___65322959528531859_70251421331300'
+
+
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 13:43:37 +0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.1ms)
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.6/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 28 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/dropdown.scss
+         from line 5 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.6/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 36 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.6/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.6/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 105 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/button.scss
+         from line 6 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/base/base.sass
+         from line 3 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /Users/macbook/.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.6/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 42 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/file_upload.sass
+         from line 12 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/controls/contols.css.scss
+         from line 11 of /Applications/MAMP/htdocs/dbEditor/app/assets/stylesheets/application.css.sass
+
+Completed 200 OK in 1555ms (Views: 1554.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 13:43:39 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-09 13:43:39 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-09 13:43:39 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-05-09 13:43:39 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-09 13:43:39 +0300

@@ -1,0 +1,17 @@
+.modal {
+  margin: auto;
+
+  .fancybox-skin {
+    background: white;
+    padding: $modal-padding !important;
+    border-radius: 0;
+    input {
+      min-width: $input-width;
+      width: 100%;
+    }
+    .btn-close{
+      color: #444444;
+      font-size: 0.6em;
+    }
+  }
+}
