@@ -1,0 +1,19 @@
+%h1 Listing specialties
+%table
+  %thead
+    %tr
+      %th [num
+      %th Name
+      %th
+      %th
+      %th
+  %tbody
+    - @specialties.each do |specialty|
+      %tr
+        %td= specialty.[num
+        %td= specialty.name
+        %td= link_to 'Show', specialty
+        %td= link_to 'Edit', edit_specialty_path(specialty)
+        %td= link_to 'Destroy', specialty, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Specialty', new_specialty_path

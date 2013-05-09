@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong [num:
+  = @specialty.[num
+%p
+  %strong Name:
+  = @specialty.name
+= link_to 'Edit', edit_specialty_path(@specialty)
+|
+\#{link_to 'Back', specialties_path}

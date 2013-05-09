@@ -1,0 +1,15 @@
+= form_for(@elective) do |f|
+  - if @elective.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@elective.errors.count, "error")
+        prohibited this elective from being saved:
+      %ul
+        - @elective.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .actions
+    = f.submit

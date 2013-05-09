@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130509091959) do
+ActiveRecord::Schema.define(version: 20130509102036) do
+
+  create_table "elective_days", force: true do |t|
+    t.integer  "num"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "electives", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "firms", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "specialties", force: true do |t|
+    t.integer  "num"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
