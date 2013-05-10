@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/ging/avatars_for_rails.git
+  revision: 8c1ef8f878c187774929cffdd00da65f97e7105f
+  specs:
+    avatars_for_rails (1.0.5)
+      flashy (~> 0.0.1)
+      jquery-rails (>= 1.0.9)
+      paperclip (>= 2.3.4)
+      rmagick (>= 2.13.1)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 6b5988d756d780903bf8c9ccb3e2b3b724ccebe8
   branch: rails4
@@ -48,11 +58,6 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.9)
-    avatars_for_rails (1.0.5)
-      flashy (~> 0.0.1)
-      jquery-rails (>= 1.0.9)
-      paperclip (>= 2.3.4)
-      rmagick (>= 2.13.1)
     bcrypt-ruby (3.0.1)
     bourbon (3.1.6)
       sass (>= 3.2.0)
@@ -181,7 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  avatars_for_rails
+  avatars_for_rails!
   bourbon
   coffee-rails (~> 4.0.0)
   devise!

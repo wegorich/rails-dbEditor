@@ -2,23 +2,28 @@
 
 header.page {
   $height: $header-height;
-  background: white;
   height: $real-header-height;
-  border: {
-    bottom: $base-border;
-    top: $border-width solid $base-background-color;
-  }
 
   $margin: 20px;
   $line-height: $height - $margin*2;
 
   .wrapper {
     height: $header-height;
-    & > * {
-      margin: ($header-height - $input-height)/2 $margin;
-    }
   }
-
+  .logo,.user,.page-title{
+    background: white;
+    box-shadow: $layout-box;
+    border-radius: 0 0 $main-margin $main-margin;
+    padding: 0 $main-margin!important;
+  }
+  .page-title{
+    margin-left: $header-logo-width + $main-padding+ 2*$main-margin;
+    height: $header-height;
+    @include inline-block;
+    line-height: $header-height;
+    font-size: 1.2em;
+    color: $dark-lame;
+  }
   .logo {
     position: absolute;
     z-index: 110;
@@ -33,13 +38,7 @@ header.page {
   }
 
   .session {
-    float: left;
-    width: 30%;
-    padding-left: $layout-margin;
-    margin: {
-      left: 70%;
-      right: 0;
-    }
+    float: right;
 
     > li {
       padding: 0;
@@ -83,7 +82,7 @@ header.page {
         }
         img {
           display: inline-block;
-          border: $base-border;
+          border-radius: 50%;
           width: $real-input-height;
           height: $real-input-height;
           vertical-align: middle;

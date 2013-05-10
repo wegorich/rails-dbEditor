@@ -1,0 +1,7 @@
+.people.s-icon-padding
+  = image_tag user.logo.url(:medium)
+  .name
+    = link_to '#' do
+      = user ? user.name : 'Непойми кто'
+    %span.subscr
+      20 подписчиков

@@ -1,0 +1,13 @@
+= content_for :title do
+  = page_name
+
+= content_for :page_nav do
+  .page-nav
+
+    %ul.list.inline
+      = tab_item 'Учащиеся', users_path
+      = tab_item 'Кружки', electives_path
+      = tab_item 'Списки групп', specialties_path
+      = tab_item 'Свидетельства', root_path
+      = tab_item 'Организации / заказчики', firms_path
+      = tab_item 'Конференции', root_path

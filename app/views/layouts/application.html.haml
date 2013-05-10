@@ -3,6 +3,7 @@
 
 - content_for :main do
   %section.main{class: params['controller']}
+    = yield(:page_nav)
     - if content_for? :aside
       %section.main-content
         = yield

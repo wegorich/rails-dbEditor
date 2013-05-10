@@ -19,13 +19,14 @@
     z-index: 1000;
     display: none;
     min-width: 160px;
-    margin: 2px 0 0;
+    margin: $main-margin/3*2 0 0;
 
     list-style: none;
-    background-color: #ffffff;
-    border: $base-border;
+    background: white;
+    box-shadow: $layout-box;
+    border-radius: $main-margin;
+    overflow: hidden;
 
-    @include box-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;

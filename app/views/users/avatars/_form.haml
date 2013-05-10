@@ -1,0 +1,6 @@
+= simple_form_for avatarable, url: avatar_path, multipart: true do |f|
+    = f.input :logo,as: :file, 'data-url' => avatar_path
+
+= render partial: 'users/avatars/progress'
+
+%script $(function () {AvatarForRails.edit();});

@@ -55,5 +55,5 @@ gem 'fancybox2-rails'
 gem 'font-awesome-sass-rails'
 
 gem 'simple_form'
-gem 'avatars_for_rails'
+gem 'avatars_for_rails', :git => 'git://github.com/ging/avatars_for_rails.git'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'

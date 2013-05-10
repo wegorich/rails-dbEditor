@@ -1,8 +1,10 @@
 %header.page
   .wrapper
     %section.logo
-      = link_to 'dataBase', root_path, class:'dropdown-toggle', data:{toggle:'dropdown', target:'#'}
-
+      = link_to 'dataBase', root_path
+    - if content_for? :title
+      %section.page-title
+        = yield(:title)
     %ul.list.inline.session
       - if user_signed_in?
 
@@ -14,7 +16,7 @@
 
           %ul.dropdown-menu.up
             %li
-              = link_to 'Персональная информация', edit_user_registration_path
+              = link_to 'Персональная информация', edit_user_path(current_user)
             %li
               = link_to 'Изменить пароль', edit_user_registration_path
             %li
