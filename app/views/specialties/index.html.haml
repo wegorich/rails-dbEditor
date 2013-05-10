@@ -1,19 +1,13 @@
 = render partial: 'layouts/navigation', locals: {page_name: 'Специальности'}
-%table
-  %thead
-    %tr
-      %th num
-      %th Name
-      %th
-      %th
-      %th
-  %tbody
-    - @specialties.each do |specialty|
-      %tr
-        %td= specialty.num
-        %td= specialty.name
-        %td= link_to 'Show', specialty
-        %td= link_to 'Edit', edit_specialty_path(specialty)
-        %td= link_to 'Destroy', specialty, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Specialty', new_specialty_path
+
+= content_for :aside do
+  = render partial: 'specialties/aside/new_specialities'
+
+
+- unless @specialties.length > 0
+  %section
+    %h1.no-data
+      Пока нету специальностей в наше базе
+      = link_to 'но можно добавить', new_specialty_path
+- else
+  = render partial: 'specialties/shared/speciality', collection: @specialties, as: :item

@@ -1,10 +1,17 @@
-%p#notice= notice
-%p
-  %strong num:
-  = @specialty.num
-%p
-  %strong Name:
-  = @specialty.name
-= link_to 'Edit', edit_specialty_path(@specialty)
-|
-\#{link_to 'Back', specialties_path}
+= content_for :title do
+  Специальность
+
+.entity
+  .content
+    %h2.title
+      = "#{@specialty.num} - #{@specialty.name}"
+    .sub
+      %ul.list.inline
+        %li
+          = link_to edit_specialty_path(@specialty), class: 'btn btn-regular' do
+            %i.icon-pencil
+            Править
+        %li
+          = button_to  @firm, method: :delete,  class: 'btn btn-warning' do
+            %i.icon-trash
+            Удалить
