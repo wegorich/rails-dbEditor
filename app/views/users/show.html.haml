@@ -1,7 +1,7 @@
-%p#notice= notice
-%p
-  %strong Name:
-  = @user.name
-= link_to 'Edit', edit_user_path(@user)
-|
-\#{link_to 'Back', users_path}
+= content_for :title do
+  Просмотр пользователя
+
+.people
+  = image_tag @user.logo.url(:medium)
+  .name
+    = @user.name

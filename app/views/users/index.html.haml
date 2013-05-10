@@ -1,2 +1,12 @@
+- content_for :aside do
+  = render partial: 'users/aside/electives'
+
 = render partial: 'layouts/navigation', locals: {page_name: 'Учащиеся'}
-= render partial: 'users/shared/user', collection: @users
+- unless @users.length > 0
+  %section
+    %h1.no-data
+      Пока нету пользователей
+      = link_to 'можешь быть первым', new_user_registration_path
+- else
+%section.peoples
+  = render partial: 'users/shared/user', collection: @users

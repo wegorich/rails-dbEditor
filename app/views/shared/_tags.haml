@@ -1,0 +1,6 @@
+.tags
+  - tags.each do |t|
+    = link_to t, class:'tag' do
+      = t.name
+      %span.num
+        -#= t.db_ancestor_classifiers.length

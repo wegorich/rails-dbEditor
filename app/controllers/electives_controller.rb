@@ -69,6 +69,6 @@ class ElectivesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def elective_params
-      params.require(:elective).permit(:name)
+      params.require(:elective).permit(:name, :description)
     end
 end

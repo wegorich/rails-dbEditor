@@ -1,17 +1,10 @@
 = render partial: 'layouts/navigation', locals: {page_name: 'Кружки'}
-%table
-  %thead
-    %tr
-      %th description
-      %th
-      %th
-      %th
-  %tbody
-    - @electives.each do |elective|
-      %tr
-        %td= elective.description
-        %td= link_to 'Show', elective
-        %td= link_to 'Edit', edit_elective_path(elective)
-        %td= link_to 'Destroy', elective, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Elective', new_elective_path
+
+- unless @electives.length > 0
+  %section
+    %h1.no-data
+      Пока нету кружков
+      = link_to 'но можно добавить', new_elective_path
+- else
+  = render partial: 'electives/shared/elective', collection: @electives, as: :item
+

@@ -1,7 +1,22 @@
-%p#notice= notice
-%p
-  %strong description:
-  = @elective.description
-= link_to 'Edit', edit_elective_path(@elective)
-|
-\#{link_to 'Back', electives_path}
+= content_for :aside do
+  = render partial: 'electives/aside/users', locals: { item: @elective }
+
+= content_for :title do
+  Кружок
+
+.entity
+  .content
+    %h2.title
+      = @elective.name
+    %p
+      = @elective.description
+    .sub
+      %ul.list.inline
+        %li
+          = link_to edit_elective_path(@elective), class: 'btn btn-regular' do
+            %i.icon-pencil
+            Править
+        %li
+          = button_to  @elective, method: :delete,  class: 'btn btn-warning' do
+            %i.icon-trash
+            Удалить

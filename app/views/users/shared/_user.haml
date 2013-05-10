@@ -1,7 +1,10 @@
-.people.s-icon-padding
-  = image_tag user.logo.url(:medium)
+- small ||= false
+.people
+  = link_to user do
+    = image_tag user.logo.url(small ? :small : :medium)
   .name
-    = link_to '#' do
+    = link_to user do
       = user ? user.name : 'Непойми кто'
     %span.subscr
-      20 подписчиков
+      Кружки
+      = user.electivesations.count

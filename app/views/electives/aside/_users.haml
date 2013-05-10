@@ -1,0 +1,6 @@
+- users = item.electivesations{|x| x.user}
+- if users.length > 0
+  .aside-item
+    %p
+      Пользователи полюбившие этот кружок
+    = render partial: 'users/shared/user', collection: users

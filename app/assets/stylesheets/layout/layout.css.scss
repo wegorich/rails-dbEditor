@@ -133,32 +133,3 @@ h1, h2, h3, h4, h5, h6 {
     color: #adadad;
   }
 }
-
-.s-icon-padding {
-  margin-left: $solution-icon-height+$layout-margin;
-}
-
-.solution-icon {
-  position: absolute;
-  width: $solution-icon-height;
-  min-height: $solution-icon-height;
-  left: 0;
-  background: image-url("icons/solutions.png") no-repeat;
-  background-position: 0 -56px;
-  &.on {
-    background-position: 0 0;
-    text-align: center;
-    line-height: $solution-icon-line-height;
-    font-size: 18px;
-    .descr {
-      position: absolute;
-      color: $black;
-      width: $solution-icon-height;
-      top: 100%;
-      margin-top: $main-margin;
-      text-align: center;
-      font-size: 12px;
-      line-height: 1;
-    }
-  }
-}

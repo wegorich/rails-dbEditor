@@ -1,20 +1,21 @@
-.people
+.peoples
   @include clearfix
+  margin-top: -$main-padding
+.people
+  float: left
   position: relative
   vertical-align: middle
   display: block
-  width: 100%
-  margin-top: $main-padding +  4 * $border-width
+  width: 25%
+  margin-top: $main-padding
   font-size: 1.1em
-  &:first-child
-    margin-top: 0
   .name
     display: table-cell
-    height: $button-height
-    padding-left: $input-text-padding
+    height: $avatar-middle*.5
+    padding-left: $main-padding
     text-align: left
     vertical-align: middle
-    line-height: 1.5
+    line-height: 2
 
   .subscr
     display: block
@@ -23,7 +24,9 @@
     line-height: 1
 
   img
-    height: $button-height
-    width: $button-height
-    border: $base-border
+    height: $avatar-middle*.5
+    width: $avatar-middle*.5
+    @include base-round-block
+    padding: 0
+    border-radius: 50%
     float: left

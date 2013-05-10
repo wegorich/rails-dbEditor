@@ -1,0 +1,5 @@
+- if elective_items.any?
+  .aside-item.classification
+    %p
+      Интересные кружки, посмотри и присоединяйся
+    = render partial: 'shared/tags', locals:{tags: elective_items}
