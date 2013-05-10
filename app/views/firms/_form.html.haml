@@ -1,6 +1,10 @@
-= simple_form_for(@firm) do |f|
-  = f.error_notification
-  .inputs
-    = f.input :description
-  .actions
-    = f.button :submit
+= content_for :title do
+  Фрима
+  = @firm.name
+
+.main-content.create
+  = simple_form_for @firm do |f|
+    = f.input :name, label: 'Название фирмы', autofocus: true
+    = f.input :description, label: 'Что это за фирма', hint: 'Род занятий, колличество сотрудников и прочая важная информация', placeholder: 'Желательно'
+    .input
+      = f.submit 'Сохранить', class: 'btn btn-light-green'

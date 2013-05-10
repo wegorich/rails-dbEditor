@@ -1,7 +1,19 @@
-%p#notice= notice
-%p
-  %strong description:
-  = @firm.description
-= link_to 'Edit', edit_firm_path(@firm)
-|
-\#{link_to 'Back', firms_path}
+= content_for :title do
+  Фирма
+
+.entity
+  .content
+    %h2.title
+      = @firm.name
+    %p
+      = @firm.description
+    .sub
+      %ul.list.inline
+        %li
+          = link_to edit_firm_path(@firm), class: 'btn btn-regular' do
+            %i.icon-pencil
+            Править
+        %li
+          = button_to  @firm, method: :delete,  class: 'btn btn-warning' do
+            %i.icon-trash
+            Удалить

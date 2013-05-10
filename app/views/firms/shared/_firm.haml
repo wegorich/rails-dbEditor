@@ -1,0 +1,10 @@
+.entity
+  .content
+    %h2.title
+      = link_to item.name, item
+    %p
+      = item.description[0..300]
+
+      - if item.description.length > 300
+        %span ...
+        = link_to 'еще', item

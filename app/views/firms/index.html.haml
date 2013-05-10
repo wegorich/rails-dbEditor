@@ -1,17 +1,9 @@
 = render partial: 'layouts/navigation', locals: {page_name: 'Фирмы'}
-%table
-  %thead
-    %tr
-      %th description
-      %th
-      %th
-      %th
-  %tbody
-    - @firms.each do |firm|
-      %tr
-        %td= firm.description
-        %td= link_to 'Show', firm
-        %td= link_to 'Edit', edit_firm_path(firm)
-        %td= link_to 'Destroy', firm, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Firm', new_firm_path
+
+- unless @firms.length > 0
+  %section
+    %h1.no-data
+      Пока нету фирм в наше базе
+      = link_to 'но можно добавить', new_firm_path
+- else
+  = render partial: 'firms/shared/firm', collection: @firms, as: :item
