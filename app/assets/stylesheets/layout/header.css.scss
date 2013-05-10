@@ -11,8 +11,7 @@ header.page {
     height: $header-height;
   }
   .logo,.user,.page-title{
-    background: white;
-    box-shadow: $layout-box;
+    @include base-round-block;
     border-radius: 0 0 $main-margin $main-margin;
     padding: 0 $main-margin!important;
   }
