@@ -1,28 +1,29 @@
 .auth
-  - user = User.new
   .block
-    %form#new_user
+    = simple_form_for resource,as: :resource_name, url: user_session_path do |f|
       %header
         %h2
           Войдите
         %p
           Что бы быть полноценным пользователем
       %section
-        = simple_form_for user, as: :user, url: session_path(:user), remote: true do |f|
-          = f.email_field :email, placeholder: 'введите свой email', autofocus: true
-          .attach-group
-            = f.password_field :password, placeholder: 'пароль'
-            = f.submit 'Вход', class: 'btn btn-light-green'
+        = f.input :email,label: false, placeholder: 'введите свой email', autofocus: true
+        .attach-group
+          = f.input :password, label: false, placeholder: 'пароль'
+          = f.submit 'Вход', class: 'btn btn-light-green'
+          = f.input :remember_me, as: :boolean, label: 'Запомни меня'
+
   .block
-    %form#new_user
+    = simple_form_for resource, as: resource_name, url: registration_path(resource_name) do |f|
       %header
         %h2
           Зарегистрируйтесь
         %p
           Что бы работать с нашей системой
       %section
-        = simple_form_for user, as: :user, url: registration_path(:user), remote: true do |f|
-          = f.email_field :email, placeholder: 'введите свой email'
-          .attach-group
-            = f.password_field :password, placeholder: 'пароль'
-            = f.submit 'Регистрация', class: 'btn btn-regular'
+        = f.input :email,label: false, placeholder: 'введите свой email'
+        .attach-group
+          = f.input :password,label: false, placeholder: 'пароль'
+          = f.submit  'Регистрация', class: 'btn btn-regular'
+    -#= simple_form_for resource, as: :resource_name, url: registration_path(resource_name) do |f|
+

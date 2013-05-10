@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap/bootstrap-dropdown
 //= require turbolinks
-//= require_tree .
+//= require avatars_for_rails
+//= require bootstrap
