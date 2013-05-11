@@ -1,0 +1,9 @@
+%p
+  Вы можете изменить
+  = link_to 'граватарку', 'https://ru.gravatar.com/'
+%p
+  или загрузить аватарку по из интернета
+= simple_form_for @user, html: { method: :put } do |f|
+  = f.input :avatar_url, autofocus: true, placeholder: 'можно оставить пустым'
+  .input
+    = f.submit 'Сохранить', class: 'btn btn-light-green'

@@ -51,11 +51,10 @@ gem 'hpricot'
 
 gem 'bourbon'
 gem 'neat'
-gem 'fancybox2-rails'
+gem 'fancybox2-rails', '~> 0.2.4'
 gem 'font-awesome-sass-rails'
 
 gem 'simple_form'
-gem 'avatars_for_rails', :git => 'git://github.com/ging/avatars_for_rails.git'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem 'ransack', git: 'git://github.com/ernie/ransack.git' , branch: 'rails-4'

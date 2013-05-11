@@ -5,6 +5,7 @@ jQuery ->
   bootstrapInit = ()->
     $('.dropdown-toggle').dropdown()
     $('select').selectpicker()
+    $('.fancybox').fancybox()
 
   bootstrapInit()
 

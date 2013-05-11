@@ -1,0 +1,5 @@
+.aside-item.avatar-edit{data:{no:{turbolink:true}}}
+  = link_to avatar_users_path(:id => @user.id), class: 'fancybox' do
+    = image_tag avatar_url(@user,:large)
+    %span
+      Править

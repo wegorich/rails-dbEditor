@@ -1,0 +1,21 @@
+.avatar-edit
+  @include base-round-block
+  width: 200px
+  a
+    display: block
+    box-shadow: none
+    img
+      display: block
+    text-align: middle
+    span
+      display: none
+      margin-top: -($button-height+$main-margin)
+      margin-bottom: $main-margin
+      text-align: center
+      background: $light-green
+      background: rgba($light-green, .75)
+      line-height: $button-height
+      color: white
+      position: relative
+    &:hover span
+      display: block

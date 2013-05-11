@@ -15,4 +15,13 @@ module ApplicationHelper
     end
     link_to(name, '#', class: 'btn btn-regular add-field', data: {id: id, fields: fields.gsub("\n", '')})
   end
+
+  def avatar_url(user, size)
+    if user.avatar_url.present?
+      user.avatar_url
+    else
+      gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
+      "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size == :small ? 32 : 200 }"
+    end
+  end
 end

@@ -1,7 +1,6 @@
 - content_for :aside do
-  -#= image_tag @user.logo.url(:medium)
-  = render partial: 'users/avatars/form', locals: {avatarable: @user}
-  -#= render partial: 'users/avatars/crop', locals: {avatarable: @user}
+  = render partial: 'users/avatar/avatar_edit_preview'
+
 
 .create
   %h1

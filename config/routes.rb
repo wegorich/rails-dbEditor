@@ -14,6 +14,7 @@ Htdocs::Application.routes.draw do
   devise_for :users, controllers: {registrations: 'registrations'}
   resources :users do
     collection { post :search, to: 'users#index' }
+    collection { get :avatar, to: 'users#edit_avatar' }
   end
 
   root to: 'home#index'

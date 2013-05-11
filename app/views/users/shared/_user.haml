@@ -1,7 +1,7 @@
 - small ||= false
 .people
   = link_to user do
-    = image_tag user.logo.url(small ? :small : :medium)
+    = image_tag avatar_url(user, :large)
   .name
     = link_to user do
       = user ? user.name : 'Непойми кто'

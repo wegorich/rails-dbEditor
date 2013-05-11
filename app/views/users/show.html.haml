@@ -2,6 +2,6 @@
   Учащийся
 
 .people
-  = image_tag @user.logo.url(:medium)
+  = image_tag avatar_url(@user,:large)
   .name
     = @user.name
