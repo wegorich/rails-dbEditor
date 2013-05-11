@@ -1,4 +1,4 @@
-.dropdown {
+.dropdown,.bootstrap-select {
   position: relative;
   &.open {
     .icon-caret-down:before {
@@ -47,7 +47,10 @@
         background-image: none;
       }
     }
-
+    .selected{
+      color: $black;
+      background: $drop-down-hover;
+    }
     &> li a{
       display: block;
       padding: 5px 15px;

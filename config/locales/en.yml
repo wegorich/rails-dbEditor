@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activemodel:
+    attributes:
+      elective:
+        created_at: "Дата создания"
+        name: "Название"
+        description: "Описание"
+        updated_at: "Дата обновления"

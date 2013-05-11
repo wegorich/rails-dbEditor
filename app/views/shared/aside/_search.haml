@@ -1,0 +1,18 @@
+.aside-item.aside-search
+  = search_form_for search, url: url, method: :post do |f|
+    .content
+      = f.condition_fields do |c|
+        %h3
+          Критерии поиска
+        = render 'shared/aside/search_conditional_fields', f: c
+
+        -#= link_to_add_fields '<i class="icon-cicle-sign"></i> Добавить поле', f, :condition
+        -#= f.label :name_eq, "Title"
+        -#= f.text_field :name_eq
+        %h3
+          Сортировка
+        .input
+          = f.sort_fields do |s|
+            = s.sort_select
+
+    = f.submit 'Искать', class:'btn btn-light-green'

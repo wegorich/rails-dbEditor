@@ -15,4 +15,5 @@
 //= require twitter/bootstrap/bootstrap-dropdown
 //= require turbolinks
 //= require avatars_for_rails
+//= require bootstrap-select.min
 //= require bootstrap

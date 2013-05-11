@@ -4,7 +4,10 @@ class ElectivesController < ApplicationController
   # GET /electives
   # GET /electives.json
   def index
-    @electives = Elective.all
+    @search = Elective.search(params[:q])
+    @electives = @search.result(:distinct => true)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
   end
 
   # GET /electives/1
