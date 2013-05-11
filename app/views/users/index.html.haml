@@ -1,5 +1,6 @@
 - content_for :aside do
   = render partial: 'users/aside/electives'
+  = render partial: 'shared/aside/search', locals:{url: search_users_path, search: @search}
 
 = render partial: 'layouts/navigation', locals: {page_name: 'Учащиеся'}
 - unless @users.length > 0

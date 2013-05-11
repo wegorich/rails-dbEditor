@@ -4,7 +4,10 @@ class FirmsController < ApplicationController
   # GET /firms
   # GET /firms.json
   def index
-    @firms = Firm.all
+    @search = Firm.search(params[:q])
+    @firms = @search.result(:distinct => true)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
   end
 
   # GET /firms/1

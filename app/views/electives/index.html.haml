@@ -3,6 +3,7 @@
 = content_for :aside do
   = render partial: 'electives/aside/new_electives'
   = render partial: 'shared/aside/search', locals:{url: search_electives_path, search: @search}
+
 - unless @electives.length > 0
   %section
     %h1.no-data

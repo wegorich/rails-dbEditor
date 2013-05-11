@@ -4,7 +4,10 @@ class SpecialtiesController < ApplicationController
   # GET /specialties
   # GET /specialties.json
   def index
-    @specialties = Specialty.all
+    @search = Specialty.search(params[:q])
+    @specialties = @search.result(:distinct => true)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
   end
 
   # GET /specialties/1
