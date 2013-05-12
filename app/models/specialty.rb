@@ -1,5 +1,7 @@
 class Specialty < ActiveRecord::Base
-  belongs_to :firm
+  has_many :specializables
+  has_many :groups
+
   UNRANSACKABLE_ATTRIBUTES = ["id"]
 
   def self.ransackable_attributes auth_object = nil

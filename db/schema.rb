@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130511211626) do
+ActiveRecord::Schema.define(version: 20130512091617) do
 
   create_table "elective_days", force: true do |t|
     t.integer  "num"
@@ -31,8 +31,57 @@ ActiveRecord::Schema.define(version: 20130511211626) do
     t.integer "elective_id"
   end
 
+  create_table "event_reports", force: true do |t|
+    t.string   "name"
+    t.boolean  "tech_support"
+    t.boolean  "hostel"
+    t.text     "sinopsis"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_types", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "eventables", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "event_report_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", force: true do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.integer  "event_type_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "firms", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "description"
+    t.string   "address"
+  end
+
+  create_table "groups", force: true do |t|
+    t.string   "name"
+    t.integer  "specialty_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "specializables", force: true do |t|
+    t.integer  "specialty_id"
+    t.integer  "firm_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +89,14 @@ ActiveRecord::Schema.define(version: 20130511211626) do
   create_table "specialties", force: true do |t|
     t.integer  "num"
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "description"
+  end
+
+  create_table "user_types", force: true do |t|
+    t.string   "name"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -63,9 +120,14 @@ ActiveRecord::Schema.define(version: 20130511211626) do
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
     t.string   "avatar_url"
+    t.integer  "user_type_id"
+    t.integer  "group_id"
+    t.string   "phone"
+    t.string   "city"
+    t.string   "address"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

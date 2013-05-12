@@ -1,5 +1,6 @@
 class Firm < ActiveRecord::Base
-  has_many :specialties
+  has_many :specializables
+
   UNRANSACKABLE_ATTRIBUTES = ["id"]
 
   def self.ransackable_attributes auth_object = nil

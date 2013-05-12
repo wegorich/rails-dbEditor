@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :electivesations
+  has_many :eventables
+  belongs_to :user_type
+  belongs_to :group
 
   UNRANSACKABLE_ATTRIBUTES = ["id"]
 

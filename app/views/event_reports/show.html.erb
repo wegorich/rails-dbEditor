@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event_report.name %>
+</p>
+
+<p>
+  <strong>Tech support:</strong>
+  <%= @event_report.tech_support %>
+</p>
+
+<p>
+  <strong>Hostel:</strong>
+  <%= @event_report.hostel %>
+</p>
+
+<p>
+  <strong>Sinopsis:</strong>
+  <%= @event_report.sinopsis %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @event_report.event_id %>
+</p>
+
+<%= link_to 'Edit', edit_event_report_path(@event_report) %> |
+<%= link_to 'Back', event_reports_path %>

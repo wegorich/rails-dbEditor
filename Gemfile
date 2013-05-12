@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.beta1'
+gem 'rails', '4.0.0.rc1'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.beta1'
+gem 'sass-rails', '~> 4.0.0.rc1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -57,4 +57,4 @@ gem 'font-awesome-sass-rails'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
-gem 'ransack', git: 'git://github.com/ernie/ransack.git' , branch: 'rails-4'
+gem 'ransack', github: 'jonatack/ransack', ref: '0703144bb0ce2ea1884ef02b52bc51157152b566'

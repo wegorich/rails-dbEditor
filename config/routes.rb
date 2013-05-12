@@ -1,4 +1,14 @@
 Htdocs::Application.routes.draw do
+  resources :event_reports
+
+  resources :events
+
+  resources :event_types
+
+  resources :groups
+
+  resources :user_types
+
   resources :firms do
     collection { post :search, to: 'firms#index' }
   end
