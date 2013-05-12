@@ -12,6 +12,9 @@
     height: $header-line-height;
     width: $header-line-height;
   }
+  .btn{
+    margin-left: $main-margin/3;
+  }
   padding-left: $header-line-height + $main-margin !important;
 }
 
@@ -61,6 +64,9 @@
     }
     p {
       margin: $main-margin 0 0;
+    }
+    .peoples{
+      padding-top: $main-margin;
     }
   }
 

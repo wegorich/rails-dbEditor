@@ -3,14 +3,30 @@
 
 = content_for :title do
   = notice
-%h1
-  = @group.name
-%p
-  = @group.specialty_id
-= link_to edit_group_path(@group), class: 'btn btn-regular' do
-  %i.icon-pencil
-  Править
 
-= link_to group_path, method: :delete, class: 'btn btn-warning' do
-  %i.icon-trash
-  Удалить
+.full-body
+  .full-descr
+    = link_to edit_group_path(@group), class: 'btn btn-regular r' do
+      %i.icon-pencil
+      Править
+
+    = link_to group_path, method: :delete, class: 'btn btn-warning r' do
+      %i.icon-trash
+      Удалить
+  .content
+    .group-item
+      %h1
+        = link_to @group.name, @group
+        %span.speciality
+          cпециальность
+          - @group.specialties.each do |s|
+            = link_to s.name, s
+      %p
+        учеников в группе
+        = "( #{@group.users.length} )"
+      - if @group.users.length == 0
+        %h1.no-data
+          пустая группа
+      - else
+        .peoples
+          = render partial: 'users/shared/user', collection: @group.users, as: :user

@@ -13,4 +13,4 @@
       пустая группа
   - else
     .peoples
-      = render partial: 'users/shared/user', collection: group.users, as: :user
+      = render partial: 'users/shared/user', collection: group.users.last(4), as: :user
