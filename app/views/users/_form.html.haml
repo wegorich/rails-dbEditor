@@ -1,5 +1,6 @@
 - content_for :aside do
   = render partial: 'users/avatar/avatar_edit_preview'
+  = render partial: 'users/aside/add'
 
 
 .create
@@ -8,7 +9,16 @@
     = @user.name
 
   = simple_form_for @user, html: { method: :put } do |f|
-    = f.input :name, autofocus: true
-    = f.input :email
+    = f.input :name, label:'Ваше ФИО', autofocus: true
+    = f.input :city, as: :country, label: 'Откуда вы'
+    %h1
+      Общие категории
+    = f.input :group, as: :select
+    = f.input :user_type, as: :select
+    %h1
+      Контактная информация
+    = f.input :address, as: :text, label: 'Где вас можно найти', placeholder: 'необязательное поле', hint: 'Чем подробнее напишите, тем проще вас будет найти'
+    = f.input :email, label: 'Почта'
+    = f.input :phone, label: 'Ваш контактный телефон', placeholder: '8(029) xxx-xx-xx'
     .input
       = f.submit 'Сохранить', class: 'btn btn-light-green'

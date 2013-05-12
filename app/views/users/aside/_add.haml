@@ -1,0 +1,9 @@
+.aside-item
+  %p
+    Вам нехватает группы или типа пользователя? Добавьте!
+  = link_to new_user_type_path, class: 'btn btn-regular' do
+    %i.icon-plus-sign
+    Новый тип
+  = link_to new_group_path, class: 'btn btn-light-green' do
+    %i.icon-plus-sign
+    Новая группа

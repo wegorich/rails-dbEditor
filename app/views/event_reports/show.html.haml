@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @event_report.name
+%p
+  %strong Tech support:
+  = @event_report.tech_support
+%p
+  %strong Hostel:
+  = @event_report.hostel
+%p
+  %strong Sinopsis:
+  = @event_report.sinopsis
+%p
+  %strong Event:
+  = @event_report.event_id
+= link_to 'Edit', edit_event_report_path(@event_report)
+|
+\#{link_to 'Back', event_reports_path}

@@ -55,6 +55,7 @@ gem 'fancybox2-rails', '~> 0.2.4'
 gem 'font-awesome-sass-rails'
 
 gem 'simple_form'
+gem 'country_select'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem 'ransack', github: 'jonatack/ransack', ref: '0703144bb0ce2ea1884ef02b52bc51157152b566'
