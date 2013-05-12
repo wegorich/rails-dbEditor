@@ -1,7 +1,60 @@
 = content_for :title do
   Учащийся
 
-.people
-  = image_tag avatar_url(@user,:large)
-  .name
-    = @user.name
+- content_for :aside do
+  = render partial: 'users/avatar/avatar_edit_preview'
+  = render partial: 'users/aside/show_list'
+
+.full-body
+  - if user_signed_in? && @user.id == current_user.id
+    .full-descr
+      = link_to edit_user_path(@user), class: 'r btn btn-regular' do
+        %i.icon-pencil
+
+  .content
+    %h1.title
+      = @user.name
+      %span.descr
+        - unless @user.user_type.nil?
+          = '-'
+          = link_to @user.user_type.name, @user.user_type
+
+        - unless @user.group.nil?
+          = '- группа'
+          = link_to @user.group.name, @user.group
+          - @user.group.specialties.each do |s|
+            = link_to s.name, s
+
+    - if @user.city
+      %p
+        Живет в городе
+        %strong= @user.city
+
+    %p
+      %h3
+        Контактаня информация:
+      %ul.list
+        %li
+          %strong
+            Почта
+          = @user.email
+        %li
+          %strong
+            Адрес
+          = @user.address
+        %li
+          %strong
+            Телефон
+          = @user.phone
+
+    - if @user.electives.any?
+      .aside-item.classification
+        %h3
+          Посещаемые кружки
+        = render partial: 'shared/tags', locals:{tags: @user.electives}
+
+    - if @user.event_reports.any?
+      .aside-item.classification
+        %h3
+          Доклады
+        = render partial: 'shared/tags', locals:{tags: @user.event_reports}

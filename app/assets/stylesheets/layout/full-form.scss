@@ -16,8 +16,7 @@
 }
 
 .full-body {
-  background: white;
-  border: $base-border;
+  @include base-round-block;
   .manage-item {
     margin: $main-margin $main-padding 0;
     line-height: 1;
@@ -31,7 +30,11 @@
   }
   .content {
     padding: $main-padding;
-
+    h3{
+      font-size: 1.2em;
+      color: $gray;
+      margin: $main-padding 0 $main-margin;
+    }
     .title {
       font-weight: normal;
       margin-bottom: $main-margin;
@@ -40,6 +43,12 @@
         left:100%;
         margin-left: -$border-width;
         content: ' ';
+      }
+      .descr{
+        font-size: 0.7em;
+        a{
+          color: $sub-gray
+        }
       }
 
       &:before{
