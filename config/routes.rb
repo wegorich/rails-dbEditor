@@ -1,7 +1,9 @@
 Htdocs::Application.routes.draw do
   resources :event_reports
 
-  resources :events
+  resources :events do
+    collection { post :search, to: 'events#index' }
+  end
 
   resources :event_types
 

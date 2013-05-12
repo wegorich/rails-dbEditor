@@ -1,7 +1,7 @@
 = content_for :aside do
   = render partial: 'groups/aside/add_group'
   = render partial: 'users/aside/electives'
-  = render partial: 'shared/aside/search', locals:{url: search_users_path, search: @search}
+  = render partial: 'shared/aside/search', locals:{url: search_groups_path, search: @search}
 
 = render partial: 'layouts/navigation', locals: {page_name: 'Списки групп'}
 

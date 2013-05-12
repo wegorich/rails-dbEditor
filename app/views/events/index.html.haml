@@ -1,4 +1,9 @@
-%h1 Listing events
+- content_for :aside do
+  = render partial: 'events/aside/add_new'
+  = render partial: 'shared/aside/search', locals:{url: search_events_path, search: @search}
+
+= render partial: 'layouts/navigation', locals: {page_name: 'События'}
+
 %table
   %thead
     %tr
@@ -19,5 +24,3 @@
         %td= link_to 'Show', event
         %td= link_to 'Edit', edit_event_path(event)
         %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Event', new_event_path

@@ -28,7 +28,7 @@
         = image_tag 'icons/document.png'
       .name
         %span
-          Свидетельства
+          Специальности
 
     = link_to firms_path, class: 'back-icon-blue' do
       .image
@@ -37,12 +37,12 @@
         %span
           Организации / заказчики
 
-  = link_to specialties_path, class: 'back-red' do
+  = link_to events_path, class: 'back-red' do
     .image
       = image_tag 'icons/discussion.png'
     .name
       %span
-        Конференции
+        События
 
 - unless user_signed_in?
   = render partial: 'home/shared/login'

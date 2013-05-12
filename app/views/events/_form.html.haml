@@ -1,9 +1,8 @@
 = simple_form_for(@event) do |f|
   = f.error_notification
-  .inputs
-    = f.input :start
-    = f.input :end
-    = f.input :event_type_id
-    = f.input :name
-  .actions
-    = f.button :submit
+  = f.input :name, autofocus: true, label: 'Название события'
+  = f.input :start, label: 'Дата начала'
+  = f.input :end, label:'Дата завершения'
+  = f.association :event_type, label:'Тип события'
+  .input
+    = f.submit 'Сохранить', class: 'btn btn-light-green'
