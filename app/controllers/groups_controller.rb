@@ -4,7 +4,10 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.json
   def index
-    @groups = Group.all
+    @search = Group.search(params[:q])
+    @groups = @search.result(:distinct => true)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
   end
 
   # GET /groups/1
@@ -69,6 +72,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:name, :specialty_id)
+      params.require(:group).permit(:name, specialty_ids:[], user_ids:[])
     end
 end

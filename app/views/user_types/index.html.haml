@@ -1,9 +1,10 @@
-%h1 Listing user_types
+= content_for :title do
+  Список типов
 %table
   %thead
     %tr
-      %th Name
-      %th Description
+      %th Название
+      %th Описание
       %th
       %th
       %th
@@ -12,8 +13,14 @@
       %tr
         %td= user_type.name
         %td= user_type.description
-        %td= link_to 'Show', user_type
-        %td= link_to 'Edit', edit_user_type_path(user_type)
-        %td= link_to 'Destroy', user_type, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New User type', new_user_type_path
+        %td
+          = link_to edit_user_type_path(user_type), class: 'btn btn-regular' do
+            %i.icon-pencil
+            Править
+        %td
+          = link_to user_type, method: :delete, class: 'btn btn-warning' do
+            %i.icon-trash
+            Удалить
+= link_to new_user_type_path, class: 'btn btn-light-green' do
+  %i.icon-plus-sign
+  Новый тип

@@ -1,10 +1,10 @@
-%p#notice= notice
+= content_for :aside do
+  = render partial: 'user_types/aside/show_list'
+
+= content_for :title do
+  = notice
+
+%h1
+  = link_to @user_type.name, edit_user_type_path(@user_type)
 %p
-  %strong Name:
-  = @user_type.name
-%p
-  %strong Description:
   = @user_type.description
-= link_to 'Edit', edit_user_type_path(@user_type)
-|
-\#{link_to 'Back', user_types_path}

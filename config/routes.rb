@@ -5,7 +5,9 @@ Htdocs::Application.routes.draw do
 
   resources :event_types
 
-  resources :groups
+  resources :groups do
+    collection { post :search, to: 'groups#index' }
+  end
 
   resources :user_types
 

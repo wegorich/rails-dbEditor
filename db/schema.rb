@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130512091617) do
+ActiveRecord::Schema.define(version: 20130512110000) do
 
   create_table "elective_days", force: true do |t|
     t.integer  "num"
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(version: 20130512091617) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
+    t.integer  "group_id"
   end
 
   create_table "user_types", force: true do |t|

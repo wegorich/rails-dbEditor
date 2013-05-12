@@ -1,5 +1,9 @@
 = content_for :aside do
-  = render partial: 'electives/aside/users', locals: { item: @elective }
+  = render partial: 'electives/aside/show_list'
+  .aside-item
+    %p Посетители кружка
+    .peoples
+      = render partial: 'users/shared/user_small', collection: @elective.users, as: :user
 
 = content_for :title do
   Кружок

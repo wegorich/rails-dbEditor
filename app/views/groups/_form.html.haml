@@ -1,7 +1,15 @@
-= simple_form_for(@group) do |f|
-  = f.error_notification
-  .inputs
-    = f.input :name
-    = f.input :specialty_id
-  .actions
-    = f.button :submit
+= content_for :title do
+  Группа
+  = '"' + @group.name+'"' unless @group.name.nil?
+
+= content_for :aside do
+  = render partial: 'groups/aside/show_list'
+
+.create
+  = simple_form_for(@group) do |f|
+    = f.error_notification
+    = f.input :name, autofocus: true, label: 'Название группы'
+    = f.association :specialties, label: 'Специальности'
+    = f.association :users, label:'Учащиеся'
+    .input
+      = f.submit 'Сохранить', class: 'btn btn-light-green'

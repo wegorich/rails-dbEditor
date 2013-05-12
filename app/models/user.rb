@@ -7,8 +7,13 @@ class User < ActiveRecord::Base
 
   has_many :electivesations
   has_many :eventables
+  accepts_nested_attributes_for :electivesations, :allow_destroy => true
+  accepts_nested_attributes_for :eventables, :allow_destroy => true
   belongs_to :user_type
   belongs_to :group
+
+  has_many :electives, :through => :electivesations
+  has_many :event_reports, :through => :eventables
 
   UNRANSACKABLE_ATTRIBUTES = ["id"]
 

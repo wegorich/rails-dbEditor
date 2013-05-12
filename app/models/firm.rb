@@ -1,5 +1,6 @@
 class Firm < ActiveRecord::Base
   has_many :specializables
+  accepts_nested_attributes_for :specializables, :allow_destroy => true
 
   UNRANSACKABLE_ATTRIBUTES = ["id"]
 

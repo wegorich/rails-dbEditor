@@ -1,19 +1,16 @@
-%h1 Listing groups
-%table
-  %thead
-    %tr
-      %th Name
-      %th Specialty
-      %th
-      %th
-      %th
-  %tbody
-    - @groups.each do |group|
-      %tr
-        %td= group.name
-        %td= group.specialty_id
-        %td= link_to 'Show', group
-        %td= link_to 'Edit', edit_group_path(group)
-        %td= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Group', new_group_path
+= content_for :aside do
+  = render partial: 'groups/aside/add_group'
+  = render partial: 'users/aside/electives'
+  = render partial: 'shared/aside/search', locals:{url: search_users_path, search: @search}
+
+= render partial: 'layouts/navigation', locals: {page_name: 'Списки групп'}
+
+- unless @groups.length > 0
+  %section
+    %h1.no-data
+      Пока нету групп, но
+      = link_to 'можно добавить', new_group_path
+- else
+  = render partial: 'groups/blocks/group', collection: @groups
+
+

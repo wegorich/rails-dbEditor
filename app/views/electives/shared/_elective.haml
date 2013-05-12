@@ -8,3 +8,6 @@
       - if item.description.length > 300
         %span ...
         = link_to 'еще', item
+
+    .peoples
+      = render partial: 'users/shared/user_small', collection: item.users, as: :user

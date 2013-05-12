@@ -1,0 +1,16 @@
+.group-item
+  %h1
+    = link_to group.name, group
+    %span.speciality
+      cпециальность
+      - group.specialties.each do |s|
+        = link_to s.name, s
+  %p
+    учеников в группе
+    = "( #{group.users.length} )"
+  - if group.users.length == 0
+    %h1.no-data
+      пустая группа
+  - else
+    .peoples
+      = render partial: 'users/shared/user', collection: group.users, as: :user

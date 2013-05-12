@@ -1,5 +1,6 @@
 = content_for :aside do
   = render partial: 'electives/aside/el_day'
+  = render partial: 'electives/aside/show_list'
 
 = content_for :title do
   Кружок
@@ -9,5 +10,6 @@
   = simple_form_for @elective do |f|
     = f.input :name, label: 'Название кружка', autofocus: true
     = f.input :description, label: 'Описание кружка', hint: 'Подробно опишите, что и как будет происходить на занятиях', placeholder: 'Необязательно'
+    = f.association :users, label: 'Поситители'
     .input
       = f.submit 'Сохранить', class: 'btn btn-light-green'

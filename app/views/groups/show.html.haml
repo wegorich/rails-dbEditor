@@ -1,10 +1,16 @@
-%p#notice= notice
-%p
-  %strong Name:
+= content_for :aside do
+  = render partial: 'groups/aside/show_list'
+
+= content_for :title do
+  = notice
+%h1
   = @group.name
 %p
-  %strong Specialty:
   = @group.specialty_id
-= link_to 'Edit', edit_group_path(@group)
-|
-\#{link_to 'Back', groups_path}
+= link_to edit_group_path(@group), class: 'btn btn-regular' do
+  %i.icon-pencil
+  Править
+
+= link_to group_path, method: :delete, class: 'btn btn-warning' do
+  %i.icon-trash
+  Удалить
