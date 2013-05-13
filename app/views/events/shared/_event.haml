@@ -1,0 +1,14 @@
+.entity
+  .content
+    %h2.title
+      = link_to item.name, item
+    - unless item.event_type.nil?
+      %p
+        = item.event_type.name
+    .sub
+      %span.descr
+        %strong
+          = l(item.start, format:('%d %B %Y'))
+        по
+        %strong
+          = l(item.end, format:('%d %B %Y'))
