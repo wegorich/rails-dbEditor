@@ -1,13 +1,17 @@
 Htdocs::Application.routes.draw do
   resources :elective_days
 
-  resources :event_reports
+  resources :event_reports do
+    collection { post :search, to: 'event_types#index' }
+  end
 
   resources :events do
     collection { post :search, to: 'events#index' }
   end
 
-  resources :event_types
+  resources :event_types do
+    collection { post :search, to: 'event_types#index' }
+  end
 
   resources :groups do
     collection { post :search, to: 'groups#index' }

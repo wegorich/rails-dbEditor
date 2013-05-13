@@ -4,7 +4,10 @@ class EventTypesController < ApplicationController
   # GET /event_types
   # GET /event_types.json
   def index
-    @event_types = EventType.all
+    @search = EventType.search(params[:q])
+    @event_types = @search.result(:distinct => true)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
   end
 
   # GET /event_types/1
@@ -69,6 +72,6 @@ class EventTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_type_params
-      params.require(:event_type).permit(:name, :description)
+      params.require(:event_type).permit(:name, :description, event_ids: [])
     end
 end

@@ -1,10 +1,25 @@
-%p#notice= notice
-%p
-  %strong Name:
-  = @event_type.name
-%p
-  %strong Description:
-  = @event_type.description
-= link_to 'Edit', edit_event_type_path(@event_type)
-|
-\#{link_to 'Back', event_types_path}
+= content_for :aside do
+  = render partial: 'event_types/aside/show_list'
+  = render partial: 'events/aside/add_new'
+
+= content_for :title do
+  Тип события
+  = notice
+
+.full-body
+  .full-descr
+    = link_to edit_event_type_path(@event_type), class: 'btn btn-regular r' do
+      %i.icon-pencil
+      Править
+    = button_to  @event_type, method: :delete,  class: 'btn btn-warning r' do
+      %i.icon-trash
+      Удалить
+  .content
+    %h2.title
+      = @event_type.name
+    %p
+      = @event_type.description
+    %h3
+      Все события
+      = "( #{@event_type.events.length} )"
+    = render partial: 'shared/tags', locals:{tags: @event_type.events}

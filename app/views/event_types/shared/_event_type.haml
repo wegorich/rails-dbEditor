@@ -1,0 +1,13 @@
+.entity
+  .content
+    %h1.title
+      =link_to item.name, item
+    - unless item.description.nil?
+      %p
+        = item.description[0..300]
+
+        - if item.description.length > 300
+          %span ...
+          = link_to 'еще', item
+    .sub
+      = render partial: 'shared/tags', locals:{tags: item.events.last(5)}

@@ -1,19 +1,14 @@
-%h1 Listing event_types
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th
-      %th
-      %th
-  %tbody
-    - @event_types.each do |event_type|
-      %tr
-        %td= event_type.name
-        %td= event_type.description
-        %td= link_to 'Show', event_type
-        %td= link_to 'Edit', edit_event_type_path(event_type)
-        %td= link_to 'Destroy', event_type, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Event type', new_event_type_path
+= content_for :title do
+  Типы событий
+
+- content_for :aside do
+  = render partial: 'event_types/aside/new_event_type'
+  = render partial: 'shared/aside/search', locals:{url: search_event_types_path, search: @search}
+
+- if @event_types.length > 0
+  = render partial: 'event_types/shared/event_type', collection: @event_types, as: :item
+- else
+  %section
+    %h1.no-data
+      Пока нету типов
+      = link_to 'но можно добавить', new_event_type_path
