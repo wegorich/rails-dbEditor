@@ -1,16 +1,17 @@
-= content_for :aside do
-  = render partial: 'event_types/aside/show_list'
-  = render partial: 'events/aside/add_new'
-
 = content_for :title do
   Тип события
   = '"'+@event_type.name+'"' unless @event_type.name.nil?
 
-.create
-  = simple_form_for(@event_type) do |f|
-    = f.error_notification
-    = f.input :name, label: 'Название типа',autofocus: true
-    = f.input :description, as: :text, label: 'Описание типа', hint:'Опишите тип так, чтобы всем было понятно, что за он', placeholder: 'Необязательно'
-    = f.association :events, label: 'События'
-    .input
-      = f.submit 'Сохранить', class:'btn btn-light-green'
+.full-main-content
+  .main-content.create
+    = simple_form_for(@event_type) do |f|
+      = f.error_notification
+      = f.input :name, label: 'Название типа',autofocus: true
+      = f.input :description, as: :text, label: 'Описание типа', hint:'Опишите тип так, чтобы всем было понятно, что за он', placeholder: 'Необязательно'
+      = f.association :events, label: 'События'
+      .input
+        = f.submit 'Сохранить', class:'btn btn-light-green'
+
+  %aside.aside-content
+    = render partial: 'event_types/aside/show_list'
+    = render partial: 'events/aside/add_new'

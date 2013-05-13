@@ -1,19 +1,19 @@
-.aside-item.small
+.aside-item.small{data:{no:{turbolink:true}}}
   %p
     Вам нехватает группы или типа пользователя? Добавьте!
 
-  = link_to new_user_type_path, class: 'btn btn-regular' do
+  = link_to new_user_type_path, class: 'btn btn-regular fancybox' do
     %i.icon-plus-sign
     Новый тип
 
-  = link_to new_group_path, class: 'btn' do
+  = link_to new_group_path, class: 'btn fancybox' do
     %i.icon-plus-sign
     Новая группа
 
-  = link_to new_elective_path, class: 'btn btn-light-green' do
+  = link_to new_elective_path, class: 'btn btn-light-green fancybox' do
     %i.icon-plus-sign
     Новый кружок
 
-  = link_to new_event_report_path, class: 'btn btn-warning' do
+  = link_to new_event_report_path, class: 'btn btn-warning fancybox' do
     %i.icon-plus-sign
     Новый доклад

@@ -92,14 +92,14 @@ h1, h2, h3, h4, h5, h6 {
 .main {
   padding: $main-padding $main-padding $footer-height+ $main-padding;
   @include outer-container;
+}
 
-  .main-content {
-    width: 70%;
-    float: left;
-    background: none;
-    margin: 0;
-    padding: 0;
-  }
+.main-content {
+  width: 70%;
+  float: left;
+  background: none;
+  margin: 0;
+  padding: 0;
 }
 
 .control-panel {

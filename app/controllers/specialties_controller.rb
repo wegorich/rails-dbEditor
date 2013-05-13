@@ -18,6 +18,7 @@ class SpecialtiesController < ApplicationController
   # GET /specialties/new
   def new
     @specialty = Specialty.new
+    render layout: !request.xhr?
   end
 
   # GET /specialties/1/edit

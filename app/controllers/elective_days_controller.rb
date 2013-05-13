@@ -14,6 +14,7 @@ class ElectiveDaysController < ApplicationController
   # GET /elective_days/new
   def new
     @elective_day = ElectiveDay.new
+    render layout: !request.xhr?
   end
 
   # GET /elective_days/1/edit

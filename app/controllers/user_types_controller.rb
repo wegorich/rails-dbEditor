@@ -15,6 +15,7 @@ class UserTypesController < ApplicationController
   # GET /user_types/new
   def new
     @user_type = UserType.new
+    render layout: !request.xhr?
   end
 
   # GET /user_types/1/edit

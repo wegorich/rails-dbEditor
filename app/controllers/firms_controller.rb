@@ -18,6 +18,7 @@ class FirmsController < ApplicationController
   # GET /firms/new
   def new
     @firm = Firm.new
+    render layout: !request.xhr?
   end
 
   # GET /firms/1/edit

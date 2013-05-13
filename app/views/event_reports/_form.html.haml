@@ -1,25 +1,27 @@
-= content_for :aside do
-  = render partial: 'event_reports/aside/show_list'
-  = render partial: 'events/aside/add_new'
-
 = content_for :title do
   Доклад
   = '"'+ @event_report.name + '"' unless @event_report.name.nil?
 
-.create
-  = simple_form_for(@event_report) do |f|
-    = f.error_notification
-    = f.input :name, label: 'Название доклада', autofocus: true
-    = f.input :sinopsis, label: 'Краткое описание доклада', hint:'Кратко и по существу - о чем и как', placeholder: 'Очень важно'
-    %h3
-      Организационные вопросы
-    = f.input :tech_support, as: :radio, label: 'С технической поддержкой'
-    = f.input :hostel, as: :radio, label: 'С гостиницей'
+.full-main-content
+  .main-content.create
+    = simple_form_for(@event_report) do |f|
+      = f.error_notification
+      = f.input :name, label: 'Название доклада', autofocus: true
+      = f.input :sinopsis, label: 'Краткое описание доклада', hint:'Кратко и по существу - о чем и как', placeholder: 'Очень важно'
+      %h3
+        Организационные вопросы
+      = f.input :tech_support, as: :radio, label: 'С технической поддержкой'
+      = f.input :hostel, as: :radio, label: 'С гостиницей'
 
-    %h3
-      Выберите
-    = f.association :event, label: 'Cобытие'
-    = f.association :users, label: 'Докладчиков'
+      %h3
+        Выберите
+      = f.association :event, label: 'Cобытие'
+      = f.association :users, label: 'Докладчиков'
 
-    .input
-      = f.submit 'Сохранить', class: 'btn btn-light-green'
+      .input
+        = f.submit 'Сохранить', class: 'btn btn-light-green'
+
+  %aside.aside-content
+    = render partial: 'event_reports/aside/show_list'
+    = render partial: 'events/aside/add_new'
+

@@ -18,6 +18,7 @@ class EventTypesController < ApplicationController
   # GET /event_types/new
   def new
     @event_type = EventType.new
+    render layout: !request.xhr?
   end
 
   # GET /event_types/1/edit

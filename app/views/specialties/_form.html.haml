@@ -1,24 +1,25 @@
-= content_for :aside do
-  = render partial: 'specialties/aside/show_list'
-  = render partial: 'firms/aside/new_firm'
-  = render partial: 'groups/aside/add_group'
-
 = content_for :title do
   Специальность
   = "#{@specialty.num} - #{@specialty.name}"
 
-.create
-  = simple_form_for @specialty do |f|
-    %h3
-      Название
-    = f.input :name, label: 'Название специальности', autofocus: true
-    = f.input :num, label: 'Числовой код', hint: 'Необходим для ведомостей'
-    %h3
-      Описание
-    = f.input :description, as: :text, label: false, hint: 'Описание специальности, преподоваемых предметов и вообще', placeholder: 'Желательно'
-    %h3
-      Основные списки
-    = f.association :groups, label: 'Группы'
-    = f.association :firms, label: 'Заинтересованные фирмы'
-    .input
-      = f.submit 'Сохранить', class: 'btn btn-light-green'
+.full-main-content
+  .main-content.create
+    = simple_form_for @specialty do |f|
+      %h3
+        Название
+      = f.input :name, label: 'Название специальности', autofocus: true
+      = f.input :num, label: 'Числовой код', hint: 'Необходим для ведомостей'
+      %h3
+        Описание
+      = f.input :description, as: :text, label: false, hint: 'Описание специальности, преподоваемых предметов и вообще', placeholder: 'Желательно'
+      %h3
+        Основные списки
+      = f.association :groups, label: 'Группы'
+      = f.association :firms, label: 'Заинтересованные фирмы'
+      .input
+        = f.submit 'Сохранить', class: 'btn btn-light-green'
+
+  %aside.aside-content
+    = render partial: 'specialties/aside/show_list'
+    = render partial: 'firms/aside/new_firm'
+    = render partial: 'groups/aside/add_group'

@@ -18,6 +18,7 @@ class GroupsController < ApplicationController
   # GET /groups/new
   def new
     @group = Group.new
+    render layout: !request.xhr?
   end
 
   # GET /groups/1/edit

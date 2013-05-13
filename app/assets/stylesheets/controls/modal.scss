@@ -1,6 +1,18 @@
+.fancybox-close{
+  box-shadow: none;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
 .modal {
   margin: auto;
-
+  .fancybox-inner{
+    overflow: visible!important;
+  }
+  .full-main-content{
+    @include clearfix;
+  }
   .fancybox-skin {
     background: white;
     padding: $modal-padding !important;
@@ -8,6 +20,10 @@
     input {
       min-width: $input-width;
       width: 100%;
+    }
+    .main-content .btn{
+      width: auto;
+      min-width: auto;
     }
     .btn-close{
       color: #444444;

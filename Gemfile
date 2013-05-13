@@ -51,7 +51,6 @@ gem 'hpricot'
 
 gem 'bourbon'
 gem 'neat'
-gem 'fancybox2-rails', '~> 0.2.4'
 gem 'font-awesome-sass-rails'
 
 gem 'simple_form'

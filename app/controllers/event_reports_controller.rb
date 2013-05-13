@@ -18,6 +18,7 @@ class EventReportsController < ApplicationController
   # GET /event_reports/new
   def new
     @event_report = EventReport.new
+    render layout: !request.xhr?
   end
 
   # GET /event_reports/1/edit

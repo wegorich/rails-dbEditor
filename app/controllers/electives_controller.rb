@@ -18,6 +18,7 @@ class ElectivesController < ApplicationController
   # GET /electives/new
   def new
     @elective = Elective.new
+    render layout: !request.xhr?
   end
 
   # GET /electives/1/edit

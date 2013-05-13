@@ -16,4 +16,4 @@
 //= require turbolinks
 //= require bootstrap-select.min
 //= require bootstrap
-//= require fancybox
+//= require jquery.fancybox

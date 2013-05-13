@@ -2,13 +2,14 @@
   Тип пользователя
   = '"' + @user_type.name+'"' unless @user_type.name.nil?
 
-= content_for :aside do
-  = render partial: 'user_types/aside/show_list'
+.full-main-content
+  .main-content.create
+    = simple_form_for(@user_type) do |f|
+      = f.error_notification
+      = f.input :name, label:'Название типа', autofocus: true
+      = f.input :description, as: :text, label:'Описание', placeholder: 'Необязательное поле'
+      .input
+        = f.submit 'Сохранить', class: 'btn btn-light-green'
 
-.create
-  = simple_form_for(@user_type) do |f|
-    = f.error_notification
-    = f.input :name, label:'Название типа', autofocus: true
-    = f.input :description, as: :text, label:'Описание', placeholder: 'Необязательное поле'
-    .input
-      = f.submit 'Сохранить', class: 'btn btn-light-green'
+  %aside.aside-content
+    = render partial: 'user_types/aside/show_list'

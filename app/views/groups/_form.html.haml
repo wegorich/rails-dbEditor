@@ -2,14 +2,15 @@
   Группа
   = '"' + @group.name+'"' unless @group.name.nil?
 
-= content_for :aside do
-  = render partial: 'groups/aside/show_list'
+.full-main-content
+  .main-content.create
+    = simple_form_for(@group) do |f|
+      = f.error_notification
+      = f.input :name, autofocus: true, label: 'Название группы'
+      = f.association :specialties, label: 'Специальности'
+      = f.association :users, label:'Учащиеся'
+      .input
+        = f.submit 'Сохранить', class: 'btn btn-light-green'
 
-.create
-  = simple_form_for(@group) do |f|
-    = f.error_notification
-    = f.input :name, autofocus: true, label: 'Название группы'
-    = f.association :specialties, label: 'Специальности'
-    = f.association :users, label:'Учащиеся'
-    .input
-      = f.submit 'Сохранить', class: 'btn btn-light-green'
+  %aside.aside-content
+    = render partial: 'groups/aside/show_list'

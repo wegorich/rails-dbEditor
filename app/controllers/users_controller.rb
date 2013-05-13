@@ -20,6 +20,7 @@ class UsersController < ApplicationController
   end
 
   def edit_avatar
+    render layout: !request.xhr?
   end
 
   # PATCH/PUT /users/1
