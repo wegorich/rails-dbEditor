@@ -1,0 +1,9 @@
+- electives.each do |e|
+  .entity
+    %h1.title
+      = link_to e.name, e
+      %span.descr
+        = '- всего часов'
+        %strong= e.elective_days.sum(:num)
+    .content
+      = render partial: 'elective_days/shared/days', locals:{days: e.elective_days, edit: true}

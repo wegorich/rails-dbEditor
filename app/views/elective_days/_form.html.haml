@@ -1,0 +1,14 @@
+= content_for :aside do
+  = render partial: 'elective_days/aside/show_list'
+
+= content_for :title do
+  Кружок
+  = distance_of_time_in_words_to_now(@elective_day.time) unless @elective_day.time.nil?
+
+= simple_form_for(@elective_day) do |f|
+  = f.error_notification
+  = f.input :num, label: 'Часы'
+  = f.association :elective, label: 'Кружок'
+  = f.input :time, label: 'День'
+  .input
+    = f.submit 'Сохранить', class: 'btn btn-light-green'

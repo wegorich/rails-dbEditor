@@ -1,0 +1,21 @@
+- edit ||= false
+- if days.length > 0
+  %ul.list
+    - days.each do |d|
+      %li
+        %ul.list.inline.el-day
+          %li
+            %strong= d.num
+            часов
+          %li
+            = distance_of_time_in_words_to_now(d.time) unless d.time.nil?
+          - if edit
+            %li
+              = link_to edit_elective_day_path(d), class: 'btn btn-regular r' do
+                %i.icon-pencil
+            %li
+              = button_to  d, method: :delete,  class: 'btn btn-warning r' do
+                %i.icon-trash
+- else
+  %h3.no-data
+    Пока нету часов

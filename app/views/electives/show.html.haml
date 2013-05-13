@@ -1,9 +1,10 @@
 = content_for :aside do
   = render partial: 'electives/aside/show_list'
-  .aside-item
-    %p Посетители кружка
-    .peoples
-      = render partial: 'users/shared/user_small', collection: @elective.users, as: :user
+  - if @elective.users.length > 0
+    .aside-item
+      %p Посетители кружка
+      .peoples
+        = render partial: 'users/shared/user_small', collection: @elective.users, as: :user
 
 = content_for :title do
   Кружок
@@ -19,6 +20,10 @@
       Удалить
   .content
     %h2.title
-      = @elective.name
+      = link_to @elective.name, @elective
+      %span.descr
+        = '- всего часов'
+        %strong= @elective.elective_days.sum(:num)
     %p
       = @elective.description
+      = render partial: 'elective_days/shared/days', locals:{days: @elective.elective_days, edit: true}

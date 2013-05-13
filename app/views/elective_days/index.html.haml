@@ -1,0 +1,14 @@
+= content_for :aside do
+  = render partial: 'electives/aside/el_day'
+  = render partial: 'shared/aside/search', locals:{url: search_electives_path, search: @search}
+
+= content_for :title do
+  Все часы
+
+- unless @electives.length > 0
+  %section
+    %h1.no-data
+      Пока нету кружков
+      = link_to 'но можно добавить', new_elective_path
+- else
+  = render partial: 'elective_days/shared/elective_day', locals: {electives: @electives}

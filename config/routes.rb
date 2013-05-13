@@ -1,4 +1,6 @@
 Htdocs::Application.routes.draw do
+  resources :elective_days
+
   resources :event_reports
 
   resources :events do

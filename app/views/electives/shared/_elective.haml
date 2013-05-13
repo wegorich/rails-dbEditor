@@ -1,7 +1,10 @@
 .entity
+  %h2.title
+    = link_to item.name, item
+    %span.descr
+      = '- всего часов'
+      %strong= item.elective_days.sum(:num)
   .content
-    %h2.title
-      = link_to item.name, item
     %p
       = item.description[0..300]
 
@@ -11,3 +14,4 @@
 
     .peoples
       = render partial: 'users/shared/user_small', collection: item.users, as: :user
+      = render partial: 'elective_days/shared/days', locals:{days: item.elective_days}

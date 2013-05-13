@@ -1,0 +1,10 @@
+- unless @elective_day.elective.nil?
+  .aside-item
+    %p
+      Часов за месяц:
+      %strong
+        = current_month_hour(@elective_day.elective.elective_days)
+    %p
+      Часов за год:
+      %strong
+        = current_year_hour(@elective_day.elective.elective_days)
