@@ -17,10 +17,4 @@
       = "#{@specialty.num} - #{@specialty.name}"
     %p
       = @specialty.description
-    %h3
-      Наши группы
-    = render partial: 'shared/tags', locals:{tags: @specialty.groups}
-    %h3
-      Наши спонсоры
-    = render partial: 'shared/tags', locals:{tags: @specialty.firms}
-
+    = render partial: 'specialties/shared/tags', locals:{item:@specialty}
