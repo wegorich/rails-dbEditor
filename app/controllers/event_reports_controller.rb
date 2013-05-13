@@ -4,7 +4,10 @@ class EventReportsController < ApplicationController
   # GET /event_reports
   # GET /event_reports.json
   def index
-    @event_reports = EventReport.all
+    @search = EventReport.search(params[:q])
+    @event_reports = @search.result(:distinct => true)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
   end
 
   # GET /event_reports/1
@@ -69,6 +72,6 @@ class EventReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_report_params
-      params.require(:event_report).permit(:name, :tech_support, :hostel, :sinopsis, :event_id)
+      params.require(:event_report).permit(:name, :tech_support, :hostel, :sinopsis, :event_id, user_ids:[])
     end
 end

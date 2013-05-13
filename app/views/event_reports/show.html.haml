@@ -1,19 +1,55 @@
-%p#notice= notice
-%p
-  %strong Name:
-  = @event_report.name
-%p
-  %strong Tech support:
-  = @event_report.tech_support
-%p
-  %strong Hostel:
-  = @event_report.hostel
-%p
-  %strong Sinopsis:
-  = @event_report.sinopsis
-%p
-  %strong Event:
-  = @event_report.event_id
-= link_to 'Edit', edit_event_report_path(@event_report)
-|
-\#{link_to 'Back', event_reports_path}
+= content_for :aside do
+  = render partial: 'event_reports/aside/show_list'
+
+= content_for :title do
+  Доклад
+  = notice
+
+.full-body
+  .full-descr
+    = link_to edit_event_report_path(@event_report), class: 'btn btn-regular r' do
+      %i.icon-pencil
+      Править
+    = button_to  @event_report, method: :delete,  class: 'btn btn-warning r' do
+      %i.icon-trash
+      Удалить
+  .content
+    %h2.title
+      = @event_report.name
+      %span.descr
+        - if @event_report.tech_support
+          \-
+          %strong Есть
+          техническая поддрежка
+        - else
+          \-
+          %strong Нету
+          технической поддержки
+
+        - if @event_report.hostel
+          \-
+          %strong с гостинецей
+        - else
+          \-
+          без гостиницы
+
+    %p
+      = @event_report.sinopsis
+
+    - if @event_report.users.length > 0
+      %h3
+        Подготовлено
+      .peoples
+        = render partial: 'users/shared/user', collection: @event_report.users
+
+    - unless @event_report.event.nil?
+      %h3
+        Подготовлен для события
+        = '"'+ @event_report.event.name + '"'
+      %p
+        Которое будет проводиться с
+        %strong
+          = l(@event_report.event.start, format:('%d %B %Y')) unless @event_report.event.start.nil?
+        по
+        %strong
+          = l(@event_report.event.end, format:('%d %B %Y')) unless @event_report.event.end.nil?

@@ -1,0 +1,28 @@
+.entity
+  .content
+    %h1.title
+      =link_to item.name, item
+    - unless item.sinopsis.nil?
+      %p
+        = item.sinopsis[0..300]
+
+        - if item.sinopsis.length > 300
+          %span ...
+          = link_to 'еще', item
+    .sub
+      - unless item.event.nil?
+        %h3
+          Подготовлен для события
+          = '"'+ item.event.name + '"'
+        %p
+          Которое будет проводиться с
+          %strong
+            = l(item.event.start, format:('%d %B %Y'))
+          по
+          %strong
+            = l(item.event.end, format:('%d %B %Y'))
+      - if item.users.length > 0
+        %h3
+          Подготовлено
+        %p.peoples
+          = render partial: 'users/shared/user_small', collection: item.users, as: :user

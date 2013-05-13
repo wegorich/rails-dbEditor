@@ -1,25 +1,14 @@
-%h1 Listing event_reports
-%table
-  %thead
-    %tr
-      %th Name
-      %th Tech support
-      %th Hostel
-      %th Sinopsis
-      %th Event
-      %th
-      %th
-      %th
-  %tbody
-    - @event_reports.each do |event_report|
-      %tr
-        %td= event_report.name
-        %td= event_report.tech_support
-        %td= event_report.hostel
-        %td= event_report.sinopsis
-        %td= event_report.event_id
-        %td= link_to 'Show', event_report
-        %td= link_to 'Edit', edit_event_report_path(event_report)
-        %td= link_to 'Destroy', event_report, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Event report', new_event_report_path
+= content_for :aside do
+  = render partial: 'event_reports/aside/new_report'
+  = render partial: 'shared/aside/search', locals:{url: search_event_reports_path, search: @search}
+
+= content_for :title do
+  Список долкадов
+
+- unless @event_reports.length > 0
+  %section
+    %h1.no-data
+      Пока нету докладов
+      = link_to 'но можно добавить', new_event_report_path
+- else
+  = render partial: 'event_reports/shared/event_report', collection: @event_reports, as: :item
