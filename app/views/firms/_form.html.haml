@@ -1,10 +1,16 @@
+= content_for :aside do
+  = render partial: 'firms/aside/show_list'
+  = render partial: 'specialties/aside/new_specialities'
+
 = content_for :title do
   Фрима
   = @firm.name
 
-.main-content.create
+.create
   = simple_form_for @firm do |f|
     = f.input :name, label: 'Название фирмы', autofocus: true
-    -#= f.input :description, label: 'Что это за фирма', hint: 'Род занятий, колличество сотрудников и прочая важная информация', placeholder: 'Желательно'
+    = f.input :description, as: :text, label: 'Что это за фирма', hint: 'Род занятий, колличество сотрудников и прочая важная информация', placeholder: 'Желательно'
+    = f.input :address, label: 'Адрес фирмы', placeholder: 'Необязательно'
+    = f.association :specialties, label: 'Специальности'
     .input
       = f.submit 'Сохранить', class: 'btn btn-light-green'

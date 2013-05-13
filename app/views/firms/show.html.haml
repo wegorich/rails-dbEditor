@@ -1,19 +1,25 @@
+= content_for :aside do
+  = render partial: 'firms/aside/show_list'
+
 = content_for :title do
   Фирма
 
-.entity
+.full-body
+  .full-descr
+    = link_to edit_firm_path(@firm), class: 'btn btn-regular r' do
+      %i.icon-pencil
+      Править
+    = button_to  @firm, method: :delete,  class: 'btn btn-warning r' do
+      %i.icon-trash
+      Удалить
   .content
     %h2.title
       = @firm.name
     %p
       = @firm.description
-    .sub
-      %ul.list.inline
-        %li
-          = link_to edit_firm_path(@firm), class: 'btn btn-regular' do
-            %i.icon-pencil
-            Править
-        %li
-          = button_to  @firm, method: :delete,  class: 'btn btn-warning' do
-            %i.icon-trash
-            Удалить
+    %p
+      %strong Адрес:
+      = @firm.address
+    %h3
+      Наши любимые специальности
+    = render partial: 'shared/tags', locals:{tags: @firm.specialties}
