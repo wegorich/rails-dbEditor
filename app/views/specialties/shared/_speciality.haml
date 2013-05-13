@@ -2,3 +2,14 @@
   .content
     %h2.title
       = link_to "#{item.num} - #{item.name}", item
+    %p
+      = item.description
+    .sub
+      - if item.groups.length > 0
+        %h3
+          Наши группы
+        = render partial: 'shared/tags', locals:{tags: item.groups}
+      - if item.firms.length > 0
+        %h3
+          Наши спонсоры
+        = render partial: 'shared/tags', locals:{tags: item.firms}

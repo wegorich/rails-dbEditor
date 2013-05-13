@@ -1,17 +1,26 @@
+= content_for :aside do
+  = render partial: 'specialties/aside/show_list'
+
 = content_for :title do
   Специальность
 
-.entity
+.full-body
+  .full-descr
+    = link_to edit_specialty_path(@specialty), class: 'btn btn-regular r' do
+      %i.icon-pencil
+      Править
+    = button_to  @specialty, method: :delete,  class: 'btn btn-warning r' do
+      %i.icon-trash
+      Удалить
   .content
     %h2.title
       = "#{@specialty.num} - #{@specialty.name}"
-    .sub
-      %ul.list.inline
-        %li
-          = link_to edit_specialty_path(@specialty), class: 'btn btn-regular' do
-            %i.icon-pencil
-            Править
-        %li
-          = button_to  @firm, method: :delete,  class: 'btn btn-warning' do
-            %i.icon-trash
-            Удалить
+    %p
+      = @specialty.description
+    %h3
+      Наши группы
+    = render partial: 'shared/tags', locals:{tags: @specialty.groups}
+    %h3
+      Наши спонсоры
+    = render partial: 'shared/tags', locals:{tags: @specialty.firms}
+

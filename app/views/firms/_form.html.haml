@@ -4,7 +4,7 @@
 
 = content_for :title do
   Фрима
-  = @firm.name
+  = '"'+@firm.name+'"' unless @firm.name.nil?
 
 .create
   = simple_form_for @firm do |f|
