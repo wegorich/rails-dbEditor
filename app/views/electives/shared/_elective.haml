@@ -13,5 +13,5 @@
         = link_to 'еще', item
 
     .peoples
-      = render partial: 'users/shared/user_small', collection: item.users, as: :user
       = render partial: 'elective_days/shared/days', locals:{days: item.elective_days}
+      = render partial: 'users/shared/user_small', collection: item.users, as: :user

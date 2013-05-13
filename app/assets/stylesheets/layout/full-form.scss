@@ -41,25 +41,11 @@
     .title {
       font-weight: normal;
       margin-bottom: $main-margin;
-      &:before, &:after{
-        position: absolute;
-        left:100%;
-        margin-left: -$border-width;
-        content: ' ';
-      }
       .descr{
         font-size: 0.7em;
         a{
           color: $sub-gray
         }
-      }
-
-      &:before{
-        margin-top: -$border-width;
-        @include triangle($main-padding, $border-color, right);
-      }
-      &:after{
-        @include triangle($main-padding - 2*$border-width, white, right);
       }
     }
     p {
