@@ -2,7 +2,8 @@
   .content
     %h2.title
       = link_to "#{item.num} - #{item.name}", item
+      %span.descr
+        = "- учащихся ( #{item.groups.map{|x| x.users.length}.sum} )"
     %p
       = item.description
-    .sub
-      = render partial: 'specialties/shared/tags', locals:{item:item}
+    = render partial: 'specialties/shared/tags', locals:{item:item}

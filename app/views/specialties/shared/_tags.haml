@@ -1,8 +1,8 @@
 - if item.groups.length > 0
   %h3
-    Наши группы
+    Наши группы ( #{item.groups.length} )
   = render partial: 'shared/tags', locals:{tags: item.groups}
 - if item.firms.length > 0
   %h3
-    Наши спонсоры
+    Наши спонсоры ( #{item.firms.length} )
   = render partial: 'shared/tags', locals:{tags: item.firms}

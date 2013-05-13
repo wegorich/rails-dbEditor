@@ -2,9 +2,17 @@
   .content
     %h2.title
       = link_to item.name, item
+      %span.descr
+        = "- докладов ( #{item.event_reports.length} )"
+
     - unless item.event_type.nil?
       %p
         = item.event_type.name
+      - if item.event_reports.length > 0
+        %h3
+          Доклады
+        %p
+          = render partial: 'shared/tags', locals:{tags: item.event_reports.last(5)}
     .sub
       %span.descr
         %strong

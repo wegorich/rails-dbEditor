@@ -9,9 +9,12 @@
         - if item.description.length > 300
           %span ...
           = link_to 'еще', item
+
     - unless item.address.nil?
       %p
         %strong Адрес:
         = item.address
-    .sub
-      = render partial: 'shared/tags', locals:{tags: item.specialties}
+
+    %h3
+      Спонисируемые специальности
+    = render partial: 'shared/tags', locals:{tags: item.specialties}
