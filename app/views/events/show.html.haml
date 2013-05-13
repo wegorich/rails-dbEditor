@@ -18,10 +18,11 @@
     %h2.title
       = @event.name
     %h3
-      = @event.event_type.name unless @event.event_type.nil?
+      = link_to @event.event_type.name, @event.event_type, class:'tag' unless @event.event_type.nil?
     %span.descr
       %strong
         = l(@event.start, format:('%d %B %Y'))
       по
       %strong
         = l(@event.end, format:('%d %B %Y'))
+    = render partial: 'event_reports/shared/event_report_show', collection: @event.event_reports, as: :item

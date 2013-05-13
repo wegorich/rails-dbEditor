@@ -14,38 +14,11 @@
       %i.icon-trash
       Удалить
   .content
-    %h2.title
-      = @event_report.name
-      %span.descr
-        - if @event_report.tech_support
-          \-
-          %strong Есть
-          техническая поддрежка
-        - else
-          \-
-          %strong Нету
-          технической поддержки
-
-        - if @event_report.hostel
-          \-
-          %strong с гостинецей
-        - else
-          \-
-          без гостиницы
-
-    %p
-      = @event_report.sinopsis
-
-    - if @event_report.users.length > 0
-      %h3
-        Подготовлено
-      .peoples
-        = render partial: 'users/shared/user', collection: @event_report.users
-
+    = render partial: 'event_reports/shared/event_report_show', locals:{item: @event_report}
     - unless @event_report.event.nil?
       %h3
-        Подготовлен для события
-        = '"'+ @event_report.event.name + '"'
+        событие
+        = link_to @event_report.event.name, @event_report.event, class:'tag'
       %p
         Которое будет проводиться с
         %strong
