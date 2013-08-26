@@ -28,7 +28,8 @@ class ElectiveDaysController < ApplicationController
 
     respond_to do |format|
       if @elective_day.save
-        format.html { redirect_to 'index', notice: 'Elective day was successfully created.' }
+        format.html { redirect_to elective_days_url }
+        #format.html { redirect_to 'index', notice: 'Elective day was successfully created.' }
         format.json { render action: 'index', status: :created, location: @elective_day }
       else
         format.html { render action: 'new' }
